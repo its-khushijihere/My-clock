@@ -1,0 +1,481 @@
+body {
+    background-color: #10051f;
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #c77dff;
+    font-size: 40px;
+}
+.clock {
+    width: 300px;
+    height: 300px;
+    border: 5px solid #310553;
+    border-radius: 50%;
+    margin: 50px auto;
+    position: relative;
+   /* box-shadow: 0 0 20px #c88bf7; */
+}
+.hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom;
+    border-radius: 10px;
+}
+
+.hour-hand {
+    width: 6px;
+    height: 75px;
+    background: #ffffff;
+}
+
+.minute-hand {
+    width: 4px;
+    height: 105px;
+    background: #c77dff;
+}
+
+.second-hand {
+    width: 2px;
+    height: 120px;
+    background: #ff4fd8;
+}
+.number {
+    position: absolute;
+    color: rgb(247, 249, 252);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.number-12 {
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.number-3 {
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.number-6 {
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.number-9 {
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.number-1 {
+    top: 35px;
+    right: 65px;
+}
+
+.number-2 {
+    top: 75px;
+    right: 25px;
+}
+
+.number-4 {
+    bottom: 75px;
+    right: 25px;
+}
+
+.number-5 {
+    bottom: 35px;
+    right: 65px;
+}
+.number-7 {
+    bottom: 35px;
+    left: 65px;
+}
+
+.number-8 {
+    bottom: 75px;
+    left: 25px;
+}
+
+.number-10 {
+    top: 75px;
+    left: 25px;
+}
+
+.number-11 {
+    top: 35px;
+    left: 65px;
+}
+.center-dot {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: #ff4fd8;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 12px #ff4fd8;
+    z-index: 10;
+}
+.markers {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.marker {
+    position: absolute;
+    width: 2px;
+    height: 7px;
+    background: #7ad4fb;
+    top: 5px;
+    left: 50%;
+    transform-origin: 50% 145px;
+    box-shadow: 0 0 5px #c77dff;
+}
+.major-marker {
+    height: 12px;
+    width: 3px;
+    background: #3737fb;
+    box-shadow: 0 0 8px #9e8cef;
+}
+#date {
+    font-family: "Consolas", monospace;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: #e6b3ff;
+
+    background: rgba(199, 125, 255, 0.08);
+    border: 1px solid rgba(199, 125, 255, 0.5);
+    border-radius: 12px;
+
+    padding: 12px 22px;
+    margin: 25px auto;
+
+    /*text-shadow:
+        #0 0 5px #c77dff,
+        0 0 12px #ff4fd8;*/
+
+    box-shadow:
+        0 0 10px rgba(199, 125, 255, 0.3),
+        inset 0 0 10px rgba(199, 125, 255, 0.1);
+
+    display: inline-block;
+}
+.world-clock {
+    margin: 50px auto;
+    max-width: 900px;
+    padding: 20px;
+}
+
+.world-clock h2 {
+    color: #c77dff;
+    letter-spacing: 4px;
+    text-shadow: 0 0 12px #c77dff;
+}
+
+#world-clock-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.city-card {
+    background: rgba(199, 125, 255, 0.08);
+    border: 1px solid #c77dff;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 0 12px rgba(199, 125, 255, 0.2);
+}
+
+.city-card h3 {
+    color: #ff4fd8;
+}
+
+.city-card p {
+    color: white;
+    font-size: 22px;
+    font-family: Consolas, monospace;
+}
+.city-controls {
+    margin: 25px auto;
+}
+
+.city-controls select,
+.city-controls button {
+    padding: 12px;
+    border-radius: 8px;
+    background: #170b2b;
+    color: white;
+    border: 1px solid #c77dff;
+    cursor: pointer;
+}
+
+.remove-city {
+    background: transparent;
+    color: #ff4fd8;
+    border: 1px solid #ff4fd8;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.stopwatch {
+    margin: 60px auto;
+    text-align: center;
+}
+
+#stopwatch-display {
+    font-family: Consolas, monospace;
+    font-size: 36px;
+    color: #ff4fd8;
+    text-shadow: 0 0 12px #ff4fd8;
+    margin: 25px;
+}
+
+.stopwatch-controls button {
+    background: transparent;
+    color: white;
+    border: 1px solid #c77dff;
+    padding: 10px 20px;
+    margin: 6px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 0 8px #c77dff;
+}
+
+#lap-list {
+    list-style: none;
+    padding: 0;
+    color: #e6b3ff;
+}
+
+#lap-list li {
+    margin: 10px;
+}
+.countdown {
+    margin: 60px auto;
+    text-align: center;
+}
+
+.timer-inputs {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 25px;
+}
+
+.timer-inputs input {
+    width: 65px;
+    padding: 12px 5px;
+    background: #1a0b2e;
+    color: white;
+    border: 1px solid #c77dff;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+}
+
+#countdown-display {
+    font-family: Consolas, monospace;
+    font-size: 36px;
+    color: #ff4fd8;
+    text-shadow: 0 0 12px #ff4fd8;
+    margin: 25px;
+}
+
+.countdown-controls button {
+    background: transparent;
+    color: white;
+    border: 1px solid #c77dff;
+    padding: 10px 20px;
+    margin: 6px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 0 8px #c77dff;
+}
+
+/* FUTURISTIC ALARM CLOCK */
+
+.alarm-clock {
+    max-width: 700px;
+    margin: 70px auto;
+    padding: 30px 20px;
+    text-align: center;
+    background: linear-gradient(145deg, #170927, #0b0615);
+    border: 1px solid rgba(199, 125, 255, 0.4);
+    border-radius: 22px;
+    box-shadow:
+        0 0 20px rgba(199, 125, 255, 0.15),
+        inset 0 0 20px rgba(255, 79, 216, 0.05);
+}
+
+.alarm-clock h2 {
+    color: #ff4fd8;
+    letter-spacing: 5px;
+    text-shadow: 0 0 12px #ff4fd8;
+}
+
+.alarm-clock h3 {
+    color: #c77dff;
+    letter-spacing: 2px;
+}
+
+/* Time picker area */
+
+.alarm-inputs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.alarm-inputs input {
+    padding: 14px;
+    background: #10051f;
+    color: #ff4fd8;
+    border: 1px solid #c77dff;
+    border-radius: 10px;
+    font-family: Consolas, monospace;
+    font-size: 22px;
+    box-shadow: 0 0 12px rgba(199, 125, 255, 0.25);
+}
+
+/* Buttons */
+
+.alarm-clock button {
+    padding: 11px 18px;
+    margin: 5px;
+    background: rgba(199, 125, 255, 0.08);
+    color: #fff;
+    border: 1px solid #c77dff;
+    border-radius: 9px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 0 8px rgba(199, 125, 255, 0.3);
+}
+
+.alarm-clock button:hover {
+    background: #c77dff;
+    color: #10051f;
+    box-shadow: 0 0 18px #c77dff;
+    transform: translateY(-2px);
+}
+
+/* Individual alarm cards */
+
+.alarm-card {
+    max-width: 450px;
+    margin: 18px auto;
+    padding: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    background: linear-gradient(110deg, #211037, #130a22);
+    border: 1px solid rgba(255, 79, 216, 0.5);
+    border-radius: 14px;
+    box-shadow: 0 0 15px rgba(255, 79, 216, 0.12);
+}
+
+.alarm-card h3 {
+    margin: 5px;
+    color: #ff4fd8;
+    font-family: Consolas, monospace;
+    font-size: 25px;
+    text-shadow: 0 0 10px #ff4fd8;
+}
+
+.alarm-card p {
+    color: #c77dff;
+    font-weight: bold;
+}
+
+.alarm-card button {
+    font-size: 12px;
+    padding: 8px 12px;
+}
+
+.alarm-card .delete-alarm {
+    border-color: #ff4f79;
+}
+
+/* Stop Alarm */
+
+#stop-alarm {
+    margin-top: 25px;
+    padding: 14px 35px;
+    background: rgba(255, 40, 100, 0.12);
+    border: 1px solid #ff4f79;
+    color: #ff4f79;
+    font-weight: bold;
+    letter-spacing: 2px;
+    box-shadow: 0 0 15px rgba(255, 79, 121, 0.3);
+}
+
+#stop-alarm:hover {
+    background: #ff4f79;
+    color: white;
+    box-shadow: 0 0 25px #ff4f79;
+}
+
+/* NEON ALARM TOGGLE */
+
+.alarm-toggle {
+    position: relative;
+    display: inline-block;
+    width: 55px;
+    height: 28px;
+}
+
+.alarm-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    inset: 0;
+    cursor: pointer;
+    background: #352344;
+    border: 1px solid #8b55aa;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.toggle-slider::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 3px;
+    bottom: 3px;
+    background: #c77dff;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.alarm-toggle input:checked + .toggle-slider {
+    background: #40154b;
+    box-shadow: 0 0 12px #ff4fd8;
+}
+
+.alarm-toggle input:checked + .toggle-slider::before {
+    transform: translateX(27px);
+    background: #ff4fd8;
+    box-shadow: 0 0 12px #ff4fd8;
+}

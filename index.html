@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>My Clock</h1>
+    <div class="clock">
+    <div class="markers"></div>
+    <div class="number number-12">12</div>
+    <div class="number number-3">3</div>
+    <div class="number number-6">6</div>
+    <div class="number number-9">9</div>
+    <div class="number number-1">1</div>
+    <div class="number number-2">2</div>
+    <div class="number number-4">4</div>
+    <div class="number number-5">5</div> 
+    <div class="number number-7">7</div>
+    <div class="number number-8">8</div>
+    <div class="number number-10">10</div>
+    <div class="number number-11">11</div>
+    
+
+    <div class="hand hour-hand"></div>
+    <div class="hand minute-hand"></div>
+    <div class="hand second-hand"></div>
+
+    <div class="center-dot"></div>
+
+</div>
+<p id="date"></p>
+
+   <section class="world-clock">
+
+    <h2>WORLD CLOCK</h2>
+
+    <div class="city-controls">
+    <select id="city-select">
+        <option value="">Select a city</option>
+    </select>
+
+    <button id="add-city">+ Add City</button>
+</div>
+
+<div id="world-clock-container"></div>
+
+<section class="stopwatch">
+    <h2>STOPWATCH</h2>
+
+    <div id="stopwatch-display">00:00:00.000</div>
+
+    <div class="stopwatch-controls">
+        <button id="start-stopwatch">Start</button>
+        <button id="reset-stopwatch">Reset</button>
+        <button id="lap-stopwatch">Lap</button>
+    </div>
+
+    <ul id="lap-list"></ul>
+</section>
+</section>
+<section class="countdown">
+    <h2>COUNTDOWN TIMER</h2>
+
+    <div class="timer-inputs">
+        <input type="number" id="timer-hours"
+            placeholder="HH" min="0" max="99">
+
+        <input type="number" id="timer-minutes"
+            placeholder="MM" min="0" max="59">
+
+        <input type="number" id="timer-seconds"
+            placeholder="SS" min="0" max="59">
+    </div>
+
+    <div id="countdown-display">00:00:00</div>
+
+    <div class="countdown-controls">
+        <button id="start-timer">Start</button>
+        <button id="pause-timer">Pause</button>
+        <button id="reset-timer">Reset</button>
+    </div>
+</section>
+<section class="alarm-clock">
+    <h2>ALARM CLOCK</h2>
+
+    <div class="alarm-inputs">
+        <input type="time" id="alarm-time">
+
+        <button id="add-alarm">+ Add Alarm</button>
+    </div>
+<h3>Your Alarms</h3>
+    <div id="alarm-list"></div>
+
+    <button id="stop-alarm">Stop Alarm</button>
+</section>
+    <script src="script.js"></script>
+
+</body>
+</html>
